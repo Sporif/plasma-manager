@@ -29,12 +29,382 @@
  <dl class="variablelist">
 <dt>
  <span class="term">
+ <a id="opt-programs.elisa.enable"></a><a class="term" href="options.xhtml#opt-programs.elisa.enable"><code class="option">programs.elisa.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable the configuration module for Elisa, KDE’s music player.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/apps/elisa.nix" target="_top">
+&lt;plasma-manager/modules/apps/elisa.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.elisa.package"></a><a class="term" href="options.xhtml#opt-programs.elisa.package"><code class="option">programs.elisa.package</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The elisa package to use. Use <code class="literal">pkgs.libsForQt5.elisa</code> for Plasma 5 or <code class="literal">pkgs.kdePackages.elisa</code> for Plasma 6.
+You can also set this to <code class="literal">null</code> if you’re using a system-wide installation of Elisa on NixOS.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or package</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">pkgs.kdePackages.elisa</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">pkgs.libsForQt5.elisa</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/apps/elisa.nix" target="_top">
+&lt;plasma-manager/modules/apps/elisa.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.elisa.appearance.colorScheme"></a><a class="term" href="options.xhtml#opt-programs.elisa.appearance.colorScheme"><code class="option">programs.elisa.appearance.colorScheme</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The colour scheme of the UI. Leave this setting at <code class="literal">null</code> in order to
+not override the systems default scheme for for this application.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;Krita dark orange&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/apps/elisa.nix" target="_top">
+&lt;plasma-manager/modules/apps/elisa.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.elisa.appearance.defaultFilesViewPath"></a><a class="term" href="options.xhtml#opt-programs.elisa.appearance.defaultFilesViewPath"><code class="option">programs.elisa.appearance.defaultFilesViewPath</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The default path which will be opened in the Files view.
+Unlike the index paths, shell variables cannot be used here.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;/home/username/Music&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/apps/elisa.nix" target="_top">
+&lt;plasma-manager/modules/apps/elisa.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.elisa.appearance.defaultView"></a><a class="term" href="options.xhtml#opt-programs.elisa.appearance.defaultView"><code class="option">programs.elisa.appearance.defaultView</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The default view which will be opened when Elisa is started.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or one of “nowPlaying”, “recentlyPlayed”, “frequentlyPlayed”, “allAlbums”, “allArtists”, “allTracks”, “allGenres”, “files”, “radios”</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/apps/elisa.nix" target="_top">
+&lt;plasma-manager/modules/apps/elisa.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.elisa.appearance.embeddedView"></a><a class="term" href="options.xhtml#opt-programs.elisa.appearance.embeddedView"><code class="option">programs.elisa.appearance.embeddedView</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Select the sidebar-embedded view for Elisa. The selected view will
+be omitted from the sidebar, and its contents will instead be individually
+displayed after the main view buttons.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or one of “albums”, “artists”, “genres”</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/apps/elisa.nix" target="_top">
+&lt;plasma-manager/modules/apps/elisa.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.elisa.appearance.showNowPlayingBackground"></a><a class="term" href="options.xhtml#opt-programs.elisa.appearance.showNowPlayingBackground"><code class="option">programs.elisa.appearance.showNowPlayingBackground</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Set to <code class="literal">true</code> in order to use a blurred version of the album artwork as the background for the ‘Now Playing’ section in Elisa.
+Set to <code class="literal">false</code> in order to use a solid colour inherited from the Plasma theme.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/apps/elisa.nix" target="_top">
+&lt;plasma-manager/modules/apps/elisa.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.elisa.appearance.showProgressOnTaskBar"></a><a class="term" href="options.xhtml#opt-programs.elisa.appearance.showProgressOnTaskBar"><code class="option">programs.elisa.appearance.showProgressOnTaskBar</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to present the current track progress in the task manager widgets in panels.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/apps/elisa.nix" target="_top">
+&lt;plasma-manager/modules/apps/elisa.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.elisa.indexer.paths"></a><a class="term" href="options.xhtml#opt-programs.elisa.indexer.paths"><code class="option">programs.elisa.indexer.paths</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Stateful, persistent paths to be indexed by the Elisa Indexer.
+The Indexer will recursively search for valid music files along the given paths.
+Shell variables, such as <code class="literal">$HOME</code>, may be used freely.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or (list of string)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">&#x27;&#x27;
+  [
+    &quot;$HOME/Music&quot;
+    &quot;/ExternalDisk/more-music&quot;
+  ]
+&#x27;&#x27;
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/apps/elisa.nix" target="_top">
+&lt;plasma-manager/modules/apps/elisa.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.elisa.indexer.ratingsStyle"></a><a class="term" href="options.xhtml#opt-programs.elisa.indexer.ratingsStyle"><code class="option">programs.elisa.indexer.ratingsStyle</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The Elisa music database can attach user-defined ratings to each track.
+This option defines if the rating is a <code class="literal">0-5 stars</code> rating, or a binary <code class="literal">Favourite/Not Favourite</code> rating.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or one of “stars”, “favourites”</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/apps/elisa.nix" target="_top">
+&lt;plasma-manager/modules/apps/elisa.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.elisa.indexer.scanAtStartup"></a><a class="term" href="options.xhtml#opt-programs.elisa.indexer.scanAtStartup"><code class="option">programs.elisa.indexer.scanAtStartup</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to automatically scan the configured index paths for new tracks when Elisa is started.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/apps/elisa.nix" target="_top">
+&lt;plasma-manager/modules/apps/elisa.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.elisa.player.minimiseToSystemTray"></a><a class="term" href="options.xhtml#opt-programs.elisa.player.minimiseToSystemTray"><code class="option">programs.elisa.player.minimiseToSystemTray</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Set to <code class="literal">true</code> in order to make Elisa continue playing in the System Tray after being closed.
+Set to <code class="literal">false</code> in order to make Elisa quit after being closed.</p><p>By default, the system tray icon is the symbolic variant of the Elisa icon.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/apps/elisa.nix" target="_top">
+&lt;plasma-manager/modules/apps/elisa.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.elisa.player.playAtStartup"></a><a class="term" href="options.xhtml#opt-programs.elisa.player.playAtStartup"><code class="option">programs.elisa.player.playAtStartup</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to automatically play the previous track when Elisa is started.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/apps/elisa.nix" target="_top">
+&lt;plasma-manager/modules/apps/elisa.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.elisa.player.useAbsolutePlaylistPaths"></a><a class="term" href="options.xhtml#opt-programs.elisa.player.useAbsolutePlaylistPaths"><code class="option">programs.elisa.player.useAbsolutePlaylistPaths</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Set to <code class="literal">true</code> in order to make Elisa write <code class="literal">.m3u8</code> playlist files using the absolute paths to each track.
+Setting to <code class="literal">false</code> will make Elisa intelligently pick between relative or absolute paths.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/apps/elisa.nix" target="_top">
+&lt;plasma-manager/modules/apps/elisa.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.ghostwriter.enable"></a><a class="term" href="options.xhtml#opt-programs.ghostwriter.enable"><code class="option">programs.ghostwriter.enable</code>
   </a>
  </span>
 </dt>
 <dd>
-<p>Whether to enable Enable configuration management for Ghostwriter.
+<p>Whether to enable configuration management for Ghostwriter.
 .</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -62,11 +432,12 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The ghostwriter package to use. Use <code class="literal">pkgs.libsForQt5.ghostwriter</code> in Plasma5 and
-<code class="literal">pkgs.kdePackages.ghostwriter</code> in Plasma6.</p>
+<p>The ghostwriter package to use. Use <code class="literal">pkgs.libsForQt5.ghostwriter</code> for Plasma 5 and
+<code class="literal">pkgs.kdePackages.ghostwriter</code> for Plasma 6. Use
+<code class="literal">null</code> if <code class="literal">home-manager</code> should not install Ghostwriter.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-package</p>
+null or package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">pkgs.kdePackages.ghostwriter</code></p>
@@ -626,7 +997,7 @@ one of “italic”, “normal”, “oblique”</p>
  </span>
 </dt>
 <dd>
-<p>The style hint of this font.</p><p>See https://doc.qt.io/qt-6/qfont.html#StyleHint-enum for more.</p>
+<p>The style hint of this font.</p><p>See https://doc.qt.io/qt-6/qfont.html#StyleHint-enum for more information.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 one of “anyStyle”, “courier”, “cursive”, “decorative”, “fantasy”, “helvetica”, “monospace”, “oldEnglish”, “sansSerif”, “serif”, “system”, “times”, “typewriter”</p>
@@ -724,7 +1095,7 @@ one of “default”, “disable”, “prefer”</p>
  </span>
 </dt>
 <dd>
-<p>Whether the font matching process prefers exact matches, of best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
+<p>Whether the font matching process prefers exact matches, or best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
 correspond to <code class="literal">PreferMatch</code> and <code class="literal">PreferQuality</code> enum flags respectively.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -749,7 +1120,7 @@ one of “default”, “exact”, “quality”</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -773,7 +1144,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -823,7 +1194,7 @@ one of “bitmap”, “default”, “device”, “forceOutline”, “outline
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will not try to apply shaping rules that may be required for some scripts
+<p>If set to <code class="literal">true</code>, this font will not try to apply shaping rules that may be required for some scripts
 (e.g. Indic scripts), increasing performance if these rules are not required.</p><p>Corresponds to the <code class="literal">PreferNoShaping</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -872,7 +1243,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The weight of the font, either as a number between 1 to 1000 or as a pre-defined weight string.</p><p>See https://doc.qt.io/qt-6/qfont.html#Weight-enum for more.</p>
+<p>The weight of the font, either as a number between 1 to 1000 or as a pre-defined weight string.</p><p>See https://doc.qt.io/qt-6/qfont.html#Weight-enum for more information.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 integer between 1 and 1000 (both inclusive) or one of “black”, “bold”, “demiBold”, “extraBold”, “extraLight”, “light”, “medium”, “normal”, “thin”</p>
@@ -1462,7 +1833,7 @@ one of “italic”, “normal”, “oblique”</p>
  </span>
 </dt>
 <dd>
-<p>The style hint of this font.</p><p>See https://doc.qt.io/qt-6/qfont.html#StyleHint-enum for more.</p>
+<p>The style hint of this font.</p><p>See https://doc.qt.io/qt-6/qfont.html#StyleHint-enum for more information.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 one of “anyStyle”, “courier”, “cursive”, “decorative”, “fantasy”, “helvetica”, “monospace”, “oldEnglish”, “sansSerif”, “serif”, “system”, “times”, “typewriter”</p>
@@ -1560,7 +1931,7 @@ one of “default”, “disable”, “prefer”</p>
  </span>
 </dt>
 <dd>
-<p>Whether the font matching process prefers exact matches, of best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
+<p>Whether the font matching process prefers exact matches, or best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
 correspond to <code class="literal">PreferMatch</code> and <code class="literal">PreferQuality</code> enum flags respectively.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -1585,7 +1956,7 @@ one of “default”, “exact”, “quality”</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -1609,7 +1980,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -1659,7 +2030,7 @@ one of “bitmap”, “default”, “device”, “forceOutline”, “outline
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will not try to apply shaping rules that may be required for some scripts
+<p>If set to <code class="literal">true</code>, this font will not try to apply shaping rules that may be required for some scripts
 (e.g. Indic scripts), increasing performance if these rules are not required.</p><p>Corresponds to the <code class="literal">PreferNoShaping</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -1708,7 +2079,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The weight of the font, either as a number between 1 to 1000 or as a pre-defined weight string.</p><p>See https://doc.qt.io/qt-6/qfont.html#Weight-enum for more.</p>
+<p>The weight of the font, either as a number between 1 to 1000 or as a pre-defined weight string.</p><p>See https://doc.qt.io/qt-6/qfont.html#Weight-enum for more information.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 integer between 1 and 1000 (both inclusive) or one of “black”, “bold”, “demiBold”, “extraBold”, “extraLight”, “light”, “medium”, “normal”, “thin”</p>
@@ -2106,7 +2477,7 @@ one of “italic”, “normal”, “oblique”</p>
  </span>
 </dt>
 <dd>
-<p>The style hint of this font.</p><p>See https://doc.qt.io/qt-6/qfont.html#StyleHint-enum for more.</p>
+<p>The style hint of this font.</p><p>See https://doc.qt.io/qt-6/qfont.html#StyleHint-enum for more information.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 one of “anyStyle”, “courier”, “cursive”, “decorative”, “fantasy”, “helvetica”, “monospace”, “oldEnglish”, “sansSerif”, “serif”, “system”, “times”, “typewriter”</p>
@@ -2204,7 +2575,7 @@ one of “default”, “disable”, “prefer”</p>
  </span>
 </dt>
 <dd>
-<p>Whether the font matching process prefers exact matches, of best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
+<p>Whether the font matching process prefers exact matches, or best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
 correspond to <code class="literal">PreferMatch</code> and <code class="literal">PreferQuality</code> enum flags respectively.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -2229,7 +2600,7 @@ one of “default”, “exact”, “quality”</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -2253,7 +2624,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -2303,7 +2674,7 @@ one of “bitmap”, “default”, “device”, “forceOutline”, “outline
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will not try to apply shaping rules that may be required for some scripts
+<p>If set to <code class="literal">true</code>, this font will not try to apply shaping rules that may be required for some scripts
 (e.g. Indic scripts), increasing performance if these rules are not required.</p><p>Corresponds to the <code class="literal">PreferNoShaping</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -2352,7 +2723,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The weight of the font, either as a number between 1 to 1000 or as a pre-defined weight string.</p><p>See https://doc.qt.io/qt-6/qfont.html#Weight-enum for more.</p>
+<p>The weight of the font, either as a number between 1 to 1000 or as a pre-defined weight string.</p><p>See https://doc.qt.io/qt-6/qfont.html#Weight-enum for more information.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 integer between 1 and 1000 (both inclusive) or one of “black”, “bold”, “demiBold”, “extraBold”, “extraLight”, “light”, “medium”, “normal”, “thin”</p>
@@ -2566,8 +2937,8 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Custom themes to be added to the installation. The key is their name.
-Choose them in <code class="literal">programs.ghostwriter.theme.name</code>.</p>
+<p>Custom themes to be added to the installation. The attribute key is mapped to their name.
+Choose them from <code class="literal">programs.ghostwriter.theme.name</code>.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 attribute set of path</p>
@@ -2645,7 +3016,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Whether to enable Enable configuration management for kate.
+<p>Whether to enable configuration management for Kate, the KDE Advanced Text Editor.
 .</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -2673,13 +3044,11 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The kate package to use. Which kate package to install. Use <code class="literal">pkgs.libsForQt5.kate</code> in Plasma5 and
-<code class="literal">pkgs.kdePackages.kate</code> in Plasma6. Use <code class="literal">null</code> if home-manager should not install kate
-(use this if you want to manage the settings of this user of a system-wide kate
-installation).</p>
+<p>The kate package to use. Which Kate package to be installed by <code class="literal">home-manager</code>. Use <code class="literal">pkgs.libsForQt5.kate</code> for Plasma 5 and
+<code class="literal">pkgs.kdePackages.kate</code> for Plasma 6. Use <code class="literal">null</code> if <code class="literal">home-manager</code> should not install Kate.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-package</p>
+null or package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">pkgs.kdePackages.kate</code></p>
@@ -2703,8 +3072,7 @@ package</p>
  </span>
 </dt>
 <dd>
-<p>Whether to enable When enabled, a closing bracket is automatically inserted upon typing the opening.
-.</p>
+<p>When enabled, a closing bracket is automatically inserted upon typing the opening.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -2758,9 +3126,8 @@ string</p>
  </span>
 </dt>
 <dd>
-<p>Whether to enable When this option is enabled, then a bracket will quickly flash whenever the cursor
-moves adjacent to the corresponding bracket.
-.</p>
+<p>When this option is enabled, then a bracket will quickly flash whenever the cursor
+moves adjacent to the corresponding bracket.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -2787,11 +3154,10 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Whether to enable When enabled, and the cursor is adjacent to a closing bracket, and the corresponding
+<p>When enabled, and the cursor is adjacent to a closing bracket, and the corresponding
 closing bracket is outside of the currently visible area, then the line of the opening
 bracket and the line directly after will be shown in a small, floating window
-at the top of the text area.
-.</p>
+at the top of the text area.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -2818,9 +3184,8 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Whether to enable This option enables automatch highlighting of the lines between an opening and a
-closing bracket when the cursor is adjacent to either.
-.</p>
+<p>This option enables automatch highlighting of the lines between an opening and a
+closing bracket when the cursor is adjacent to either.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -3220,7 +3585,7 @@ one of “default”, “disable”, “prefer”</p>
  </span>
 </dt>
 <dd>
-<p>Whether the font matching process prefers exact matches, of best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
+<p>Whether the font matching process prefers exact matches, or best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
 correspond to <code class="literal">PreferMatch</code> and <code class="literal">PreferQuality</code> enum flags respectively.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -3245,7 +3610,7 @@ one of “default”, “exact”, “quality”</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -3269,7 +3634,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -3319,7 +3684,7 @@ one of “bitmap”, “default”, “device”, “forceOutline”, “outline
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will not try to apply shaping rules that may be required for some scripts
+<p>If set to <code class="literal">true</code>, this font will not try to apply shaping rules that may be required for some scripts
 (e.g. Indic scripts), increasing performance if these rules are not required.</p><p>Corresponds to the <code class="literal">PreferNoShaping</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -3416,7 +3781,7 @@ signed integer or floating point number</p>
  </span>
 </dt>
 <dd>
-<p>Whether kate should try to detect indentation for each given file and not impose default indentation settings.</p>
+<p>Whether Kate should try to detect indentation for each given file and not impose default indentation settings.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -3560,7 +3925,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Whether to unindent the current line by one level with the shortcut Shift+Tab</p>
+<p>Whether to unindent the current line by one level with the shortcut Shift+Tab.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -3635,7 +4000,7 @@ one of “normal”, “vi”</p>
  </span>
 </dt>
 <dd>
-<p>The width of a single tab (‘’	) sign (in number of spaces).</p>
+<p>The width of a single tab (<code class="literal">	</code>) sign (in number of spaces).</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 signed integer</p>
@@ -3685,7 +4050,7 @@ string</p>
 </dt>
 <dd>
 <p>The path of a theme file for the KDE editor (not the window color scheme).
-Obtain a custom one by using the GUI settings in kate. If you want to use a system-wide
+Obtain a custom one by using the GUI settings in Kate. If you want to use a system-wide
 editor color scheme set this path to null. If you set the metadata.name entry in the file
 to a value that matches the name of a system-wide color scheme undesired behaviour may
 occur. The activation will fail if a theme with the filename <code class="literal">&lt;name of your theme&gt;.theme</code>
@@ -3713,9 +4078,9 @@ null or path</p>
  </span>
 </dt>
 <dd>
-<p>Add more lsp server settings here. Check out the format on the
-<a class="link" href="https://docs.kde.org/stable5/en/kate/kate/kate-application-plugin-lspclient.html"  target="_top">KDE page</a>.
-Note that these are only the settings, the packages have to be installed separately.</p>
+<p>Add more LSP server settings here. Check out the format on the
+<a class="link" href="https://docs.kde.org/stable5/en/kate/kate/kate-application-plugin-lspclient.html"  target="_top">Kate Documentation</a>.
+Note that these are only the settings; the appropriate packages have to be installed separately.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or (attribute set)</p>
@@ -3767,7 +4132,7 @@ null or string</p>
  </span>
 </dt>
 <dd>
-<p>Whether to enable Enable configuration management for Konsole.
+<p>Whether to enable configuration management for Konsole, the KDE Terminal.
 .</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -3795,7 +4160,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Custom color schemes to be added to the installation. The key is their name.
+<p>Custom color schemes to be added to the installation. The attribute key maps to their name.
 Choose them in any profile with <code class="literal">profiles.&lt;profile&gt;.colorScheme = &lt;name&gt;</code>;</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -3820,8 +4185,8 @@ attribute set of path</p>
  </span>
 </dt>
 <dd>
-<p>The name of the konsole profile file to use by default.
-To see what options you have, just take a look at ~/.local/share/konsole/</p>
+<p>The name of the Konsole profile file to use by default.
+To see what options you have, take a look at <code class="literal">$HOME/.local/share/konsole</code></p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
@@ -3848,13 +4213,13 @@ null or string</p>
  </span>
 </dt>
 <dd>
-<p>Extra config to add to konsolerc.</p>
+<p>Extra config to add to the <code class="literal">konsolerc</code>.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-null or (attribute set of attribute set of (null or boolean or floating point number or signed integer or string))</p>
+attribute set of attribute set of (null or boolean or floating point number or signed integer or string)</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">null</code></p>
+<code class="literal">{ }</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -3897,7 +4262,7 @@ null or (attribute set of (submodule))</p>
 </dt>
 <dd>
 <p>Color scheme the profile will use. You can check the files you can
-use in ~/.local/share/konsole or /run/current-system/share/konsole.
+use in <code class="literal">$HOME/.local/share/konsole</code> or <code class="literal">/run/current-system/sw/share/konsole</code>.
 You might also add a custom color scheme using
 <code class="literal">programs.konsole.customColorSchemes</code>.</p>
 
@@ -4008,7 +4373,7 @@ string</p>
 </dt>
 <dd>
 <p>Size of the font.
-Needs a font to be set due to konsole limitations.</p>
+Due to Konsole limitations, only a limited range of sizes is possible.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 integer between 4 and 128 (both inclusive)</p>
@@ -4059,8 +4424,8 @@ null or string</p>
  </span>
 </dt>
 <dd>
-<p>The colour scheme of the UI. Leave this setting at <code class="literal">null</code> in order to
-not override the systems default scheme for for this application.</p>
+<p>The color scheme of the UI. Leave this setting at <code class="literal">null</code> in order to
+not override the system’s default scheme for for this application.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
@@ -4087,7 +4452,7 @@ null or string</p>
  </span>
 </dt>
 <dd>
-<p>Whether to enable Enable configuration management for okular.
+<p>Whether to enable configuration management for okular.
 .</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -4116,10 +4481,10 @@ boolean</p>
 </dt>
 <dd>
 <p>The okular package to use. Which okular package to install. Use <code class="literal">pkgs.libsForQt5.okular</code> in Plasma5 and
-<code class="literal">pkgs.kdePackages.okular</code> in Plasma6.</p>
+<code class="literal">pkgs.kdePackages.okular</code> in Plasma6. Use <code class="literal">null</code> if home-manager should not install Okular.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-package</p>
+null or package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">pkgs.kdePackages.okular</code></p>
@@ -4143,7 +4508,7 @@ package</p>
  </span>
 </dt>
 <dd>
-<p>Whether to enable Whether to change the colors of the documents…</p>
+<p>Whether to change the colors of the documents.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -4165,6 +4530,62 @@ boolean</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.okular.accessibility.changeColors.blackWhiteContrast"></a><a class="term" href="options.xhtml#opt-programs.okular.accessibility.changeColors.blackWhiteContrast"><code class="option">programs.okular.accessibility.changeColors.blackWhiteContrast</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>New contrast strength. Used for the <code class="literal">BlackWhite</code> mode.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or integer between 2 and 6 (both inclusive)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">4</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/apps/okular.nix" target="_top">
+&lt;plasma-manager/modules/apps/okular.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.okular.accessibility.changeColors.blackWhiteThreshold"></a><a class="term" href="options.xhtml#opt-programs.okular.accessibility.changeColors.blackWhiteThreshold"><code class="option">programs.okular.accessibility.changeColors.blackWhiteThreshold</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>A threshold for deciding between black and white.
+Higher values lead to brighter grays.
+Used for the <code class="literal">BlackWhite</code> mode.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or integer or floating point number between 2 and 253 (both inclusive)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">127</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/apps/okular.nix" target="_top">
+&lt;plasma-manager/modules/apps/okular.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.okular.accessibility.changeColors.mode"></a><a class="term" href="options.xhtml#opt-programs.okular.accessibility.changeColors.mode"><code class="option">programs.okular.accessibility.changeColors.mode</code>
   </a>
  </span>
@@ -4173,7 +4594,7 @@ boolean</p>
 <p>Mode used to change the colors.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-null or one of “Inverted”, “Paper”, “Recolor”</p>
+null or one of “Inverted”, “Paper”, “Recolor”, “BlackWhite”, “InvertLightness”, “InvertLumaSymmetric”, “InvertLuma”, “HueShiftPositive”, “HueShiftNegative”</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">null</code></p>
@@ -4275,7 +4696,7 @@ null or string</p>
  </span>
 </dt>
 <dd>
-<p>Draw borders around links.</p>
+<p>Whether to draw borders around links.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -4300,14 +4721,7 @@ null or boolean</p>
 </dt>
 <dd>
 <p>Changes what the mouse does.
-See https://docs.kde.org/stable5/en/okular/okular/menutools.html for
-the full description.
-Browse - Click-and-drag with left mouse button.
-Zoom - Zoom in with left mouse button. Reset zoom with right mouse button.
-Rectangle Selection - Draw area selection with left mouse button. Display options with right mouse button.
-Text Selection - Select text with left mouse button. Display options with right mouse button.
-Table Selection - Similar to text selection but allows for transforming the document into a table.
-Magnifier - Activates the magnifier with left mouse button.</p>
+See the <a class="link" href="https://docs.kde.org/stable5/en/okular/okular/menutools.html"  target="_top">Okular Documentation</a> for the full description.</p><div class="itemizedlist"><ul class="itemizedlist " style="list-style-type: disc;"><li class="listitem"><p><code class="literal">Browse</code>: Click-and-drag with left mouse button.</p></li><li class="listitem"><p><code class="literal">Zoom</code>: Zoom in with left mouse button. Reset zoom with right mouse button.</p></li><li class="listitem"><p><code class="literal">RectSelect</code>: Draw area selection with left mouse button. Display options with right mouse button.</p></li><li class="listitem"><p><code class="literal">TextSelect</code>: Select text with left mouse button. Display options with right mouse button.</p></li><li class="listitem"><p><code class="literal">TableSelect</code>: Similar to text selection but allows for transforming the document into a table.</p></li><li class="listitem"><p><code class="literal">Magnifier</code>: Activates the magnifier with left mouse button.</p></li></ul></div>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “Browse”, “Zoom”, “RectSelect”, “TextSelect”, “TableSelect”, “Magnifier”, “TrimSelect”</p>
@@ -4357,7 +4771,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Open files in tabs.</p>
+<p>Whether to open files in tabs.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -4381,7 +4795,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Show scrollbars.</p>
+<p>Whether to show scrollbars in the document viewer.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -4405,7 +4819,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Use smooth scrolling.</p>
+<p>Whether to use smooth scrolling.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -4429,7 +4843,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Open in continous mode by default.</p>
+<p>Whether to open in continous mode by default.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -4502,7 +4916,7 @@ null or one of “100%”, “fitWidth”, “fitPage”, “autoFit”</p>
  </span>
 </dt>
 <dd>
-<p>Enable transparancey effects. This may increase CPU usage.</p>
+<p>Whether to enable transparancy effects. This may increase CPU usage.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -4526,10 +4940,10 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Memory usage of Okular. This impacts the speed performance of Okular as it determines how much computation results are kept in memory and not recomputed.</p>
+<p>Memory usage profile for Okular. This may impact the speed performance of Okular, as it determines how many computation results are kept in memory.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-null or one of “Low”, “Normal”, “Agressive”, “Greedy”</p>
+null or one of “Low”, “Normal”, “Aggressive”, “Greedy”</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">null</code></p>
@@ -4550,7 +4964,7 @@ null or one of “Low”, “Normal”, “Agressive”, “Greedy”</p>
  </span>
 </dt>
 <dd>
-<p>Whether to enable Enable configuration management for KDE Plasma.
+<p>Whether to enable declarative configuration options for the KDE Plasma Desktop.
 .</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -4579,7 +4993,7 @@ boolean</p>
 </dt>
 <dd>
 <p>An attribute set where the keys are file names (relative to
-XDG_CONFIG_HOME) and the values are attribute sets that
+<code class="literal">$XDG_CONFIG_HOME</code>) and the values are attribute sets that
 represent configuration groups and settings inside those groups.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -4605,7 +5019,7 @@ attribute set of attribute set of attribute set of ((submodule) or (null or bool
 </dt>
 <dd>
 <p>Whether to escape the value according to kde’s escape-format. See:
-https://github.com/KDE/kconfig/blob/44f98ff5cb9008436ba5ba385cae03bbd0ab33e6/src/core/kconfigini.cpp#L882
+https://invent.kde.org/frameworks/kconfig/-/blob/v6.7.0/src/core/kconfigini.cpp?ref_type=tags#L880-945
 for info about this format.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -4730,7 +5144,7 @@ null or boolean or floating point number or signed integer or string</p>
 </dt>
 <dd>
 <p>An attribute set where the keys are file names (relative to
-XDG_DATA_HOME) and the values are attribute sets that
+<code class="literal">$XDG_DATA_HOME</code>) and the values are attribute sets that
 represent configuration groups and settings inside those groups.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -4756,7 +5170,7 @@ attribute set of attribute set of attribute set of ((submodule) or (null or bool
 </dt>
 <dd>
 <p>Whether to escape the value according to kde’s escape-format. See:
-https://github.com/KDE/kconfig/blob/44f98ff5cb9008436ba5ba385cae03bbd0ab33e6/src/core/kconfigini.cpp#L882
+https://invent.kde.org/frameworks/kconfig/-/blob/v6.7.0/src/core/kconfigini.cpp?ref_type=tags#L880-945
 for info about this format.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -4908,7 +5322,7 @@ null or one of “left”, “right”</p>
  </span>
 </dt>
 <dd>
-<p>The direction, in which desktop icons are to be arranged.</p>
+<p>The direction in which desktop icons are to be arranged.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “leftToRight”, “topToBottom”</p>
@@ -4936,8 +5350,7 @@ null or one of “leftToRight”, “topToBottom”</p>
 </dt>
 <dd>
 <p>Enables the arrow button when hovering over a folder on the desktop
-which shows a preview popup of the folder’s contents.
-Is enabled by default.</p>
+which shows a preview popup of the folder’s contents.</p><p>Enabled by default.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -4965,8 +5378,8 @@ null or boolean</p>
 </dt>
 <dd>
 <p>Locks the position of all desktop icons to the order and placement
-defined by <code class="literal">arrangement</code>, <code class="literal">alignment</code> and the <code class="literal">sorting</code> options
-so they can’t be manually moved.</p>
+defined by <code class="literal">arrangement</code>, <code class="literal">alignment</code> and the <code class="literal">sorting</code> options,
+so they cannot be manually moved.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -5024,8 +5437,8 @@ null or (list of string)</p>
 </dt>
 <dd>
 <p>The desktop icon size, which is normally configured via a slider
-with seven possible values ranging from small (0) to large (6).
-The fourth position (3) is the default.</p>
+with seven possible values ranging from small (<code class="literal">0</code>) to large (<code class="literal">6</code>).
+The fourth position (<code class="literal">3</code>) is the default.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or integer between 0 and 6 (both inclusive)</p>
@@ -5080,10 +5493,10 @@ null or boolean</p>
 </dt>
 <dd>
 <p>Folders are sorted separately from files by default. This means
-folders appear first, sorted for example ascending by name,
+folders appear first, sorted, for example, ascending by name,
 followed by files, also sorted ascending by name.
-If this option is disabled, all items are sorted irrespective
-of their type.</p>
+If this option is disabled, all items are sorted regardless
+of type.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -5110,8 +5523,8 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Specifies the sort mode for the desktop icons. By default they are
-sorted by name.</p>
+<p>Specifies the sort mode for the desktop icons. By default, they are
+sorted by <code class="literal">name</code>.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “date”, “manual”, “name”, “size”, “type”</p>
@@ -5138,7 +5551,7 @@ null or one of “date”, “manual”, “name”, “size”, “type”</p>
  </span>
 </dt>
 <dd>
-<p>Action for a left click on the desktop.</p>
+<p>Action for a left mouse click on the desktop.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “applicationLauncher”, “contextMenu”, “paste”, “switchActivity”, “switchVirtualDesktop”, “switchWindow”</p>
@@ -5165,7 +5578,7 @@ null or one of “applicationLauncher”, “contextMenu”, “paste”, “swi
  </span>
 </dt>
 <dd>
-<p>Action for a click on the desktop with the middle mouse button.</p>
+<p>Action for a middle mouse click on the desktop.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “applicationLauncher”, “contextMenu”, “paste”, “switchActivity”, “switchVirtualDesktop”, “switchWindow”</p>
@@ -5192,7 +5605,7 @@ null or one of “applicationLauncher”, “contextMenu”, “paste”, “swi
  </span>
 </dt>
 <dd>
-<p>Action for a right click on the desktop.</p>
+<p>Action for a right mouse click on the desktop.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “applicationLauncher”, “contextMenu”, “paste”, “switchActivity”, “switchVirtualDesktop”, “switchWindow”</p>
@@ -5304,7 +5717,7 @@ null or (list of (attribute-tagged union or (submodule)))</p>
 </dt>
 <dd>
 <p>An attribute set where the keys are file names (relative to
-HOME) and the values are attribute sets that represent
+<code class="literal">$HOME</code>) and the values are attribute sets that represent
 configuration groups and settings inside those groups.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -5330,7 +5743,7 @@ attribute set of attribute set of attribute set of ((submodule) or (null or bool
 </dt>
 <dd>
 <p>Whether to escape the value according to kde’s escape-format. See:
-https://github.com/KDE/kconfig/blob/44f98ff5cb9008436ba5ba385cae03bbd0ab33e6/src/core/kconfigini.cpp#L882
+https://invent.kde.org/frameworks/kconfig/-/blob/v6.7.0/src/core/kconfigini.cpp?ref_type=tags#L880-945
 for info about this format.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -5454,7 +5867,7 @@ null or boolean or floating point number or signed integer or string</p>
  </span>
 </dt>
 <dd>
-<p>The fixed width or monospace font of the system.</p>
+<p>The fixed width or monospace font for the Plasma desktop.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or (submodule)</p>
@@ -5825,7 +6238,7 @@ one of “default”, “disable”, “prefer”</p>
  </span>
 </dt>
 <dd>
-<p>Whether the font matching process prefers exact matches, of best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
+<p>Whether the font matching process prefers exact matches, or best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
 correspond to <code class="literal">PreferMatch</code> and <code class="literal">PreferQuality</code> enum flags respectively.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -5850,7 +6263,7 @@ one of “default”, “exact”, “quality”</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -5874,7 +6287,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -6021,7 +6434,7 @@ signed integer or floating point number</p>
  </span>
 </dt>
 <dd>
-<p>The main font of the system.</p>
+<p>The main font for the Plasma desktop.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or (submodule)</p>
@@ -6392,7 +6805,7 @@ one of “default”, “disable”, “prefer”</p>
  </span>
 </dt>
 <dd>
-<p>Whether the font matching process prefers exact matches, of best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
+<p>Whether the font matching process prefers exact matches, or best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
 correspond to <code class="literal">PreferMatch</code> and <code class="literal">PreferQuality</code> enum flags respectively.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -6417,7 +6830,7 @@ one of “default”, “exact”, “quality”</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -6441,7 +6854,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -6959,7 +7372,7 @@ one of “default”, “disable”, “prefer”</p>
  </span>
 </dt>
 <dd>
-<p>Whether the font matching process prefers exact matches, of best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
+<p>Whether the font matching process prefers exact matches, or best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
 correspond to <code class="literal">PreferMatch</code> and <code class="literal">PreferQuality</code> enum flags respectively.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -6984,7 +7397,7 @@ one of “default”, “exact”, “quality”</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -7008,7 +7421,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -7526,7 +7939,7 @@ one of “default”, “disable”, “prefer”</p>
  </span>
 </dt>
 <dd>
-<p>Whether the font matching process prefers exact matches, of best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
+<p>Whether the font matching process prefers exact matches, or best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
 correspond to <code class="literal">PreferMatch</code> and <code class="literal">PreferQuality</code> enum flags respectively.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -7551,7 +7964,7 @@ one of “default”, “exact”, “quality”</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -7575,7 +7988,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -8093,7 +8506,7 @@ one of “default”, “disable”, “prefer”</p>
  </span>
 </dt>
 <dd>
-<p>Whether the font matching process prefers exact matches, of best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
+<p>Whether the font matching process prefers exact matches, or best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
 correspond to <code class="literal">PreferMatch</code> and <code class="literal">PreferQuality</code> enum flags respectively.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -8118,7 +8531,7 @@ one of “default”, “exact”, “quality”</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -8142,7 +8555,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -8289,7 +8702,7 @@ signed integer or floating point number</p>
  </span>
 </dt>
 <dd>
-<p>The font used for windowTitles.</p>
+<p>The font used for window titles.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or (submodule)</p>
@@ -8660,7 +9073,7 @@ one of “default”, “disable”, “prefer”</p>
  </span>
 </dt>
 <dd>
-<p>Whether the font matching process prefers exact matches, of best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
+<p>Whether the font matching process prefers exact matches, or best quality matches.</p><p><code class="literal">default</code> corresponds to not setting any enum flag, and <code class="literal">exact</code> and <code class="literal">quality</code>
 correspond to <code class="literal">PreferMatch</code> and <code class="literal">PreferQuality</code> enum flags respectively.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -8685,7 +9098,7 @@ one of “default”, “exact”, “quality”</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will not try to find a substitute font when encountering missing glyphs.</p><p>Corresponds to the <code class="literal">NoFontMerging</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -8709,7 +9122,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>If set to true, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
+<p>If set to <code class="literal">true</code>, this font will try to avoid subpixel antialiasing.</p><p>Corresponds to the <code class="literal">NoSubpixelAntialias</code> enum flag.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -8901,7 +9314,7 @@ string</p>
  </span>
 </dt>
 <dd>
-<p>Optional comment to display in the KDE settings UI.</p>
+<p>Optional comment to display in the System Settings app.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 string</p>
@@ -8973,7 +9386,7 @@ list of string</p>
  </span>
 </dt>
 <dd>
-<p>Connect command’s stdin and stdout to systemd journal with systemd-cat.</p>
+<p>Connect the command’s <code class="literal">stdin</code> and <code class="literal">stdout</code> to the systemd journal with <code class="literal">systemd-cat</code>.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -8997,7 +9410,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Additional arguments provided to systemd-cat.</p>
+<p>Additional arguments provided to <code class="literal">systemd-cat</code>.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 string</p>
@@ -9021,7 +9434,7 @@ string</p>
  </span>
 </dt>
 <dd>
-<p>Identifier passed down to systemd-cat.</p>
+<p>Identifier passed down to <code class="literal">systemd-cat</code>.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 string</p>
@@ -9069,7 +9482,7 @@ string</p>
  </span>
 </dt>
 <dd>
-<p>Whether to enable Make keys written by plasma-manager immutable by default…</p>
+<p>Whether to make keys written by plasma-manager immutable by default.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -9112,8 +9525,40 @@ null or (list of (submodule))</p>
     layout = &quot;ca&quot;;
     variant = &quot;eng&quot;;
   }
+  {
+    displayName = &quot;usi&quot;;
+    layout = &quot;us&quot;;
+    variant = &quot;intl&quot;;
+  }
 ]
 </code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/input.nix" target="_top">
+&lt;plasma-manager/modules/input.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.input.keyboard.layouts._.displayName"></a><a class="term" href="options.xhtml#opt-programs.plasma.input.keyboard.layouts._.displayName"><code class="option">programs.plasma.input.keyboard.layouts.*.displayName</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Keyboard layout display name.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;us&quot;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -9155,7 +9600,8 @@ string</p>
  </span>
 </dt>
 <dd>
-<p>Keyboard layout variant.</p>
+<p>Keyboard layout variant.
+Examples: “mac”, “dvorak”, “workman-intl”, and “colemak_dh_wide_iso”</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
@@ -9267,7 +9713,7 @@ null or (list of string)</p>
  </span>
 </dt>
 <dd>
-<p>How many milliseconds you need to hold a key down before the input
+<p>Configure how many milliseconds a key must be held down for before the input
 starts repeating.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -9295,7 +9741,7 @@ null or integer between 100 and 5000 (both inclusive)</p>
  </span>
 </dt>
 <dd>
-<p>How quick the inputs should be repeated when holding down a key.</p>
+<p>Configure how quickly the inputs should be repeated when holding down a key.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or integer or floating point number between 0.2 and 100.0 (both inclusive)</p>
@@ -9416,7 +9862,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Mouse acceleration.</p>
+<p>Set the mouse acceleration.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or integer or floating point number between -1 and 1 (both inclusive)</p>
@@ -9443,7 +9889,7 @@ null or integer or floating point number between -1 and 1 (both inclusive)</p>
  </span>
 </dt>
 <dd>
-<p>Mouse acceleration profile.</p>
+<p>Set the mouse acceleration profile.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “none”, “default”</p>
@@ -9470,7 +9916,7 @@ null or one of “none”, “default”</p>
  </span>
 </dt>
 <dd>
-<p>Swap the left and right buttons.</p>
+<p>Whether to swap the left and right buttons.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -9497,7 +9943,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Middle click by pressing the left and right buttons at the same time.
+<p>Whether to enable middle mouse click emulation by pressing the left and right buttons at the same time.
 Activating this increases the click latency by 50ms.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -9525,8 +9971,8 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>The name of the mouse.</p><p>This can be found by looking at the Name attribute in the section in
-/proc/bus/input/devices belonging to the mouse.</p>
+<p>The name of the mouse.</p><p>This can be found by looking at the <code class="literal">Name</code> attribute in the section in
+the <code class="literal">/proc/bus/input/devices</code> path belonging to the mouse.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 string</p>
@@ -9553,7 +9999,7 @@ string</p>
  </span>
 </dt>
 <dd>
-<p>Enables natural scrolling for the mouse.</p>
+<p>Whether to enable natural scrolling for the mouse.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -9580,8 +10026,8 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>The product ID of the mouse.</p><p>This can be found by looking at the Product attribute in the section in
-/proc/bus/input/devices belonging to the mouse.</p>
+<p>The product ID of the mouse.</p><p>This can be found by looking at the <code class="literal">Product</code> attribute in the section in
+the <code class="literal">/proc/bus/input/devices</code> path belonging to the mouse.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 string</p>
@@ -9608,7 +10054,7 @@ string</p>
  </span>
 </dt>
 <dd>
-<p>How fast the scroll wheel moves.</p>
+<p>Configure how fast the scroll wheel moves.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or integer or floating point number between 0.1 and 20 (both inclusive)</p>
@@ -9635,8 +10081,8 @@ null or integer or floating point number between 0.1 and 20 (both inclusive)</p>
  </span>
 </dt>
 <dd>
-<p>The vendor ID of the mouse.</p><p>This can be found by looking at the Vendor attribute in the section in
-/proc/bus/input/devices belonging to the mouse.</p>
+<p>The vendor ID of the mouse.</p><p>This can be found by looking at the <code class="literal">Vendor</code> attribute in the section in
+the <code class="literal">/proc/bus/input/devices</code> path belonging to the mouse.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 string</p>
@@ -9703,7 +10149,7 @@ list of (submodule)</p>
  </span>
 </dt>
 <dd>
-<p>Enables or disables the touchpad.</p>
+<p>Whether to enable the touchpad.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -9730,7 +10176,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Disables the touchpad while typing.</p>
+<p>Whether to disable the touchpad while typing.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -9757,7 +10203,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Swap the left and right buttons.</p>
+<p>Whether to swap the left and right buttons.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -9784,7 +10230,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Middle click by pressing the left and right buttons at the same time.
+<p>Whether to enable middle mouse click emulation by pressing the left and right buttons at the same time.
 Activating this increases the click latency by 50ms.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -9812,8 +10258,8 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>The name of the touchpad.</p><p>This can be found by looking at the Name attribute in the section in
-/proc/bus/input/devices belonging to the touchpad.</p>
+<p>The name of the touchpad.</p><p>This can be found by looking at the <code class="literal">Name</code> attribute in the section in
+the <code class="literal">/proc/bus/input/devices</code> path belonging to the touchpad.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 string</p>
@@ -9840,7 +10286,7 @@ string</p>
  </span>
 </dt>
 <dd>
-<p>Enables natural scrolling for the touchpad.</p>
+<p>Whether to enable natural scrolling for the touchpad.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -9894,8 +10340,8 @@ null or integer or floating point number between -1 and 1 (both inclusive)</p>
  </span>
 </dt>
 <dd>
-<p>The product ID of the touchpad.</p><p>This can be found by looking at the Product attribute in the section
-in /proc/bus/input/devices belonging to the touchpad.</p>
+<p>The product ID of the touchpad.</p><p>This can be found by looking at the <code class="literal">Product</code> attribute in the section in
+the <code class="literal">/proc/bus/input/devices</code> path belonging to the touchpad.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 string</p>
@@ -9922,7 +10368,7 @@ string</p>
  </span>
 </dt>
 <dd>
-<p>How right-clicking is performed on the touchpad.</p>
+<p>Configure how right-clicking is performed on the touchpad.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “bottomRight”, “twoFingers”</p>
@@ -9949,7 +10395,7 @@ null or one of “bottomRight”, “twoFingers”</p>
  </span>
 </dt>
 <dd>
-<p>How scrolling is performed on the touchpad.</p>
+<p>Configure how scrolling is performed on the touchpad.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “touchPadEdges”, “twoFingers”</p>
@@ -9971,12 +10417,40 @@ null or one of “touchPadEdges”, “twoFingers”</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.plasma.input.touchpads._.scrollSpeed"></a><a class="term" href="options.xhtml#opt-programs.plasma.input.touchpads._.scrollSpeed"><code class="option">programs.plasma.input.touchpads.*.scrollSpeed</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Configure the scrolling speed of the touchpad. Lower is slower.
+If unset, KDE Plasma will default to 0.3.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or integer or floating point number between 0.1 and 20 (both inclusive)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">0.1</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/input.nix" target="_top">
+&lt;plasma-manager/modules/input.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.plasma.input.touchpads._.tapAndDrag"></a><a class="term" href="options.xhtml#opt-programs.plasma.input.touchpads._.tapAndDrag"><code class="option">programs.plasma.input.touchpads.*.tapAndDrag</code>
   </a>
  </span>
 </dt>
 <dd>
-<p>Enables tap-and-drag for the touchpad.</p>
+<p>Whether to enable tap-and-drag for the touchpad.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -10003,7 +10477,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Enables tap-and-drag lock for the touchpad.</p>
+<p>Whether to enable the tap-and-drag lock for the touchpad.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -10030,7 +10504,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Enables tap-to-click for the touchpad.</p>
+<p>Whether to enable tap-to-click for the touchpad.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -10057,7 +10531,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>How right-clicking is performed on the touchpad.</p>
+<p>Configure what a two-finger tap maps to on the touchpad.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “rightClick”, “middleClick”</p>
@@ -10084,8 +10558,8 @@ null or one of “rightClick”, “middleClick”</p>
  </span>
 </dt>
 <dd>
-<p>The vendor ID of the touchpad.</p><p>This can be found by looking at the Vendor attribute in the section in
-/proc/bus/input/devices belonging to the touchpad.</p>
+<p>The vendor ID of the touchpad.</p><p>This can be found by looking at the <code class="literal">Vendor</code> attribute in the section in
+the <code class="literal">/proc/bus/input/devices</code> path belonging to the touchpad.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 string</p>
@@ -10112,7 +10586,7 @@ string</p>
  </span>
 </dt>
 <dd>
-<p>Activate KRunner when typing on the desktop.</p>
+<p>Whether to activate KRunner when typing on the desktop.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -10139,7 +10613,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Behavior of KRunner’s history.</p>
+<p>Set the behavior of KRunner’s history.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “disabled”, “enableSuggestions”, “enableAutoComplete”</p>
@@ -10166,7 +10640,7 @@ null or one of “disabled”, “enableSuggestions”, “enableAutoComplete”
  </span>
 </dt>
 <dd>
-<p>Position of KRunner on screen.</p>
+<p>Set KRunner’s position on the screen.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “top”, “center”</p>
@@ -10176,6 +10650,60 @@ null or one of “top”, “center”</p>
 
 <p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">&quot;center&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/krunner.nix" target="_top">
+&lt;plasma-manager/modules/krunner.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.krunner.shortcuts.launch"></a><a class="term" href="options.xhtml#opt-programs.plasma.krunner.shortcuts.launch"><code class="option">programs.plasma.krunner.shortcuts.launch</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Set the shortcut to launch KRunner.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or string or list of string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;Meta&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/krunner.nix" target="_top">
+&lt;plasma-manager/modules/krunner.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.krunner.shortcuts.runCommandOnClipboard"></a><a class="term" href="options.xhtml#opt-programs.plasma.krunner.shortcuts.runCommandOnClipboard"><code class="option">programs.plasma.krunner.shortcuts.runCommandOnClipboard</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Set the shortcut to run the command on the clipboard contents.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or string or list of string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;Meta+Shift&quot;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -10247,7 +10775,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>The wallpaper for the lockscreen. Can be either be the path to an image file or a kpackage.</p>
+<p>The wallpaper for the lockscreen. Can be either the path to an image file or a KPackage.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or path</p>
@@ -10274,7 +10802,7 @@ null or path</p>
  </span>
 </dt>
 <dd>
-<p>Allows you to set wallpaper using the picture of the day plugin. Needs the provider.</p>
+<p>Which plugin to fetch the Picture of the Day from.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or (submodule)</p>
@@ -10348,7 +10876,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Allows you to set wallpaper using a plain color. Color is a comma-seperated R,G,B,A string. Alpha optional (default is 256).</p>
+<p>Set the wallpaper using a plain color. Color is a comma-seperated R,G,B,A string. The alpha is optional (default is 256).</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
@@ -10375,8 +10903,8 @@ null or string</p>
  </span>
 </dt>
 <dd>
-<p>Allows you to set wallpaper using the slideshow plugin. Needs the path
-to at least one directory.</p>
+<p>Allows you to set the wallpaper using the slideshow plugin. Needs the path
+to at least one directory with wallpaper images.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or (submodule)</p>
@@ -10448,7 +10976,7 @@ path or list of path</p>
  </span>
 </dt>
 <dd>
-<p>Sets whether the screen will be locked after the specified time.</p>
+<p>Whether the screen will be locked after the specified time.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -10502,7 +11030,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Whether to lock the screen on startup.</p><p>NOTE: This option is not provided in the system settings.</p>
+<p>Whether to lock the screen on startup.</p><p><span class="strong"><strong>Note:</strong></span> This option is not provided in the System Settings app.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -10529,7 +11057,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Whether the password is required to unlock the screen.</p>
+<p>Whether the user password is required to unlock the screen.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -10583,7 +11111,7 @@ null or (unsigned integer, meaning &gt;=0)</p>
  </span>
 </dt>
 <dd>
-<p>Sets the minutes after which the screen is locked.</p>
+<p>Sets the timeout in minutes after which the screen will be locked.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or (unsigned integer, meaning &gt;=0)</p>
@@ -10610,7 +11138,7 @@ null or (unsigned integer, meaning &gt;=0)</p>
  </span>
 </dt>
 <dd>
-<p>Maximized windows will not have a border.</p>
+<p>Whether to remove the border of maximized windows.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -10665,7 +11193,7 @@ null or boolean</p>
 </dt>
 <dd>
 <p>Additional distance the cursor needs to travel to cross screen edges. To
-disable edge-barriers, set this to 0.</p>
+disable edge barriers, set this to <code class="literal">0</code>.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or integer between 0 and 1000 (both inclusive)</p>
@@ -10711,6 +11239,60 @@ null or boolean</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.plasma.kwin.effects.blur.noiseStrength"></a><a class="term" href="options.xhtml#opt-programs.plasma.kwin.effects.blur.noiseStrength"><code class="option">programs.plasma.kwin.effects.blur.noiseStrength</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Adds noise to the blur effect.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or integer between 0 and 14 (both inclusive)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">8</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/kwin.nix" target="_top">
+&lt;plasma-manager/modules/kwin.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.kwin.effects.blur.strength"></a><a class="term" href="options.xhtml#opt-programs.plasma.kwin.effects.blur.strength"><code class="option">programs.plasma.kwin.effects.blur.strength</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Controls the intensity of the blur.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or integer between 1 and 15 (both inclusive)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">5</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/kwin.nix" target="_top">
+&lt;plasma-manager/modules/kwin.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.plasma.kwin.effects.cube.enable"></a><a class="term" href="options.xhtml#opt-programs.plasma.kwin.effects.cube.enable"><code class="option">programs.plasma.kwin.effects.cube.enable</code>
   </a>
  </span>
@@ -10740,7 +11322,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>The animation used when switching virtual desktop.</p>
+<p>The animation used when switching through virtual desktops.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “fade”, “slide”, “off”</p>
@@ -10767,7 +11349,7 @@ null or one of “fade”, “slide”, “off”</p>
  </span>
 </dt>
 <dd>
-<p>Darken the entire when when requesting root privileges.</p>
+<p>Darken the entire screen, except for the PolKit window, when requesting <code class="literal">root</code> privileges.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -10815,7 +11397,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Closed windows fall into pieces.</p>
+<p>Whether to make closed windows break into pieces.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -10839,7 +11421,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Display KWin’s fps in the corner of the screen;</p>
+<p>Display KWin’s FPS performance graph in the corner of the screen.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -10863,7 +11445,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>The effect when windows are minimized.</p>
+<p>The effect to be displayed when windows are minimized.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “squash”, “magiclamp”, “off”</p>
@@ -10891,7 +11473,7 @@ null or one of “squash”, “magiclamp”, “off”</p>
 </dt>
 <dd>
 <p>The duration of the minimization effect in milliseconds. Only
-available when the minimization effect is magic lamp.</p>
+available when the minimization effect is <code class="literal">magiclamp</code>.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or (positive integer, meaning &gt;0)</p>
@@ -10990,7 +11572,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Make windows translucent under different conditions.</p>
+<p>Make windows translucent under certain conditions.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -11146,7 +11728,7 @@ null or string</p>
  </span>
 </dt>
 <dd>
-<p>The mode of the night light effect.</p>
+<p>When to enable the night light effect.</p><div class="itemizedlist"><ul class="itemizedlist " style="list-style-type: disc;"><li class="listitem"><p><code class="literal">constant</code> enables it unconditonally.</p></li><li class="listitem"><p><code class="literal">location</code> uses coordinates to figure out the sunset/sunrise times for your location.</p></li><li class="listitem"><p><code class="literal">times</code> allows you to set the times for enabling and disabling night light.</p></li></ul></div>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “constant”, “location”, “times”</p>
@@ -11308,7 +11890,7 @@ null or (positive integer, meaning &gt;0)</p>
  </span>
 </dt>
 <dd>
-<p>Whether to enable Polonium</p>
+<p>Whether to enable Polonium.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -11335,7 +11917,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Whether to enable debug for Polonium</p>
+<p>Whether to enable debug mode for Polonium.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -11362,7 +11944,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>The border visibility setting for Polonium</p>
+<p>The border visibility setting for Polonium.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “noBorderAll”, “noBorderTiled”, “borderSelected”, “borderAll”</p>
@@ -11389,7 +11971,7 @@ null or one of “noBorderAll”, “noBorderTiled”, “borderSelected”, “
  </span>
 </dt>
 <dd>
-<p>The callback delay setting for Polonium</p>
+<p>The callback delay setting for Polonium.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or integer between 1 and 200 (both inclusive)</p>
@@ -11416,7 +11998,7 @@ null or integer between 1 and 200 (both inclusive)</p>
  </span>
 </dt>
 <dd>
-<p>The processes to filter for Polonium</p>
+<p>The processes to filter for Polonium.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or (list of string)</p>
@@ -11446,7 +12028,7 @@ null or (list of string)</p>
  </span>
 </dt>
 <dd>
-<p>The window titles to filter for Polonium</p>
+<p>The window titles to filter for Polonium.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or (list of string)</p>
@@ -11476,7 +12058,7 @@ null or (list of string)</p>
  </span>
 </dt>
 <dd>
-<p>The layout engine setting for Polonium</p>
+<p>The layout engine setting for Polonium.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “binaryTree”, “half”, “threeColumn”, “monocle”, “kwin”</p>
@@ -11503,7 +12085,7 @@ null or one of “binaryTree”, “half”, “threeColumn”, “monocle”, �
  </span>
 </dt>
 <dd>
-<p>The insertion point setting for Polonium</p>
+<p>The insertion point setting for Polonium.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “left”, “right”, “activeWindow”</p>
@@ -11530,7 +12112,7 @@ null or one of “left”, “right”, “activeWindow”</p>
  </span>
 </dt>
 <dd>
-<p>Whether to rotate layout for Polonium</p>
+<p>Whether to rotate the layout for Polonium.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -11557,7 +12139,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Whether to maximize single window for Polonium</p>
+<p>Whether to maximize a single window for Polonium.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -11584,7 +12166,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>The resize amount setting for Polonium</p>
+<p>The resize amount setting for Polonium.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or integer between 1 and 450 (both inclusive)</p>
@@ -11611,7 +12193,7 @@ null or integer between 1 and 450 (both inclusive)</p>
  </span>
 </dt>
 <dd>
-<p>Whether to save on tile edit for Polonium</p>
+<p>Whether to save on tile edit for Polonium.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -11638,7 +12220,7 @@ null or boolean</p>
  </span>
 </dt>
 <dd>
-<p>Whether to tile popups for Polonium</p>
+<p>Whether to tile popups for Polonium.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -11714,7 +12296,7 @@ null or (submodule)</p>
  </span>
 </dt>
 <dd>
-<p>The id of the layout.</p>
+<p>The ID of the layout.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 string</p>
@@ -11784,7 +12366,7 @@ attribute set of anything</p>
 <p>The padding between windows in tiling.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-null or (positive integer, meaning &gt;0)</p>
+null or integer between 0 and 36 (both inclusive)</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">null</code></p>
@@ -11903,9 +12485,9 @@ null or (list of string)</p>
  </span>
 </dt>
 <dd>
-<p>The amount of virtual desktops. If the names attribute is set as
-well the number of desktops must be the same as the length of the
-names list.</p>
+<p>The amount of virtual desktops. If the <code class="literal">names</code> attribute is set as
+well, then the number of desktops must be the same as the length of the
+<code class="literal">names</code> list.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or (positive integer, meaning &gt;0)</p>
@@ -11959,10 +12541,10 @@ null or (positive integer, meaning &gt;0)</p>
  </span>
 </dt>
 <dd>
-<p>Wether to discard changes made outside plasma-manager. If enabled all
-settings not specified explicitly in plasma-manager will be set to the
+<p>Wether to discard changes made outside <code class="literal">plasma-manager</code>. If enabled, all
+settings not specified explicitly in <code class="literal">plasma-manager</code> will be set to the
 default on next login. This will automatically delete a lot of
-kde-plasma config-files on each generation so be careful with this
+KDE Plasma configuration files on each generation, so do be careful with this
 option.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -12038,8 +12620,8 @@ null or one of “left”, “center”, “right”</p>
  </span>
 </dt>
 <dd>
-<p>Extra lines to add to the layout.js. See
-https://develop.kde.org/docs/plasma/scripting/ for inspiration.</p>
+<p>Extra lines to add to the <code class="literal">layout.js</code>. See
+the <a class="link" href="https://develop.kde.org/docs/plasma/scripting"  target="_top">KDE Documentation</a> for information.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
@@ -12063,7 +12645,7 @@ null or string</p>
  </span>
 </dt>
 <dd>
-<p>Whether to enable Enable or disable floating style…</p>
+<p>Whether to enable floating style…</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -12114,9 +12696,9 @@ signed integer</p>
  </span>
 </dt>
 <dd>
-<p>The hiding mode of the panel. Here windowscover and windowsbelow are
-plasma 5 only, while dodgewindows, windowsgobelow and normalpanel are
-plasma 6 only.</p>
+<p>The hiding mode of the panel. Here, <code class="literal">windowscover</code> and <code class="literal">windowsbelow</code> are
+Plasma 5-only, while <code class="literal">dodgewindows</code>, <code class="literal">windowsgobelow</code> and <code class="literal">normalpanel</code> are
+Plasma 6-only.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “none”, “autohide”, “windowscover”, “windowsbelow”, “dodgewindows”, “normalpanel”, “windowsgobelow”</p>
@@ -12278,9 +12860,9 @@ null or signed integer</p>
  </span>
 </dt>
 <dd>
-<p>The screen the panel should appear on. Can be an int, or a list of ints,
-starting from 0, representing the ID of the screen the panel should
-appear on. Alternatively it can be set to “all” if the panel should
+<p>The screen the panel should appear on. Can be an <code class="literal">int</code>, or a <code class="literal">list of ints</code>,
+starting from <code class="literal">0</code>, representing the ID of the screen the panel should
+appear on. Alternatively, it can be set to <code class="literal">all</code> if the panel should
 appear on all the screens.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -12306,10 +12888,10 @@ null or unsigned integer, meaning &gt;=0, or (list of (unsigned integer, meaning
 </dt>
 <dd>
 <p>The widgets to use in the panel. To get the names, it may be useful
-to look in the share/plasma/plasmoids folder of the nix-package the
-widget/plasmoid is from. Some packages which include some
-widgets/plasmoids are for example plasma-desktop and
-plasma-workspace.</p>
+to look in the <code class="literal">share/plasma/plasmoids</code> subdirectory in the Nix Store path the
+widget/plasmoid is sourced from. Some packages which include some
+widgets/plasmoids are, for example, <code class="literal">plasma-desktop</code> and
+<code class="literal">plasma-workspace</code>.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 list of (string or attribute-tagged union or (submodule))</p>
@@ -12376,7 +12958,7 @@ null or one of “hibernate”, “nothing”, “shutDown”, “sleep”</p>
  </span>
 </dt>
 <dd>
-<p>The duration (in seconds), when on AC, the computer must be idle
+<p>The duration (in seconds), when on AC, the computer must be idle for
 until the auto-suspend action is executed.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -12404,7 +12986,7 @@ null or integer between 60 and 600000 (both inclusive)</p>
  </span>
 </dt>
 <dd>
-<p>Enable or disable screen dimming.</p>
+<p>Whether to enable screen dimming.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -12442,6 +13024,33 @@ null or integer between 20 and 600000 (both inclusive)</p>
 
 <p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">300</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/powerdevil.nix" target="_top">
+&lt;plasma-manager/modules/powerdevil.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.powerdevil.AC.displayBrightness"></a><a class="term" href="options.xhtml#opt-programs.plasma.powerdevil.AC.displayBrightness"><code class="option">programs.plasma.powerdevil.AC.displayBrightness</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The brightness to set the display to in this mode.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or integer between 0 and 100 (both inclusive)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">10</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -12508,13 +13117,40 @@ null or one of “hibernate”, “lockScreen”, “nothing”, “showLogoutSc
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.plasma.powerdevil.AC.powerProfile"></a><a class="term" href="options.xhtml#opt-programs.plasma.powerdevil.AC.powerProfile"><code class="option">programs.plasma.powerdevil.AC.powerProfile</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The Power Profile to enter in this mode.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or one of “performance”, “balanced”, “powerSaving”</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;powerSaving&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/powerdevil.nix" target="_top">
+&lt;plasma-manager/modules/powerdevil.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.plasma.powerdevil.AC.turnOffDisplay.idleTimeout"></a><a class="term" href="options.xhtml#opt-programs.plasma.powerdevil.AC.turnOffDisplay.idleTimeout"><code class="option">programs.plasma.powerdevil.AC.turnOffDisplay.idleTimeout</code>
   </a>
  </span>
 </dt>
 <dd>
-<p>The duration (in seconds), when on AC, the computer must be idle
-(when unlocked) until the display turns off.</p>
+<p>The duration (in seconds), when on AC, the computer, when unlocked, must be idle for
+until the display turns off.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or value “never” (singular enum) or integer between 30 and 600000 (both inclusive)</p>
@@ -12572,13 +13208,13 @@ null or one of “whenLockedAndUnlocked”, “immediately” or integer between
 <p>The action, when on AC, to perform when the laptop lid is closed.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-null or one of “doNothing”, “hibernate”, “lockScreen”, “shutdown”, “sleep”, “turnOffScreen”</p>
+null or one of “doNothing”, “hibernate”, “lockScreen”, “shutDown”, “sleep”, “turnOffScreen”</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">null</code></p>
 
 <p><span class="emphasis"><em>Example:</em></span>
-<code class="literal">&quot;shutdown&quot;</code></p>
+<code class="literal">&quot;shutDown&quot;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -12650,7 +13286,7 @@ null or one of “hibernate”, “nothing”, “shutDown”, “sleep”</p>
  </span>
 </dt>
 <dd>
-<p>The duration (in seconds), when on battery, the computer must be idle
+<p>The duration (in seconds), when on battery, the computer must be idle for
 until the auto-suspend action is executed.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -12678,7 +13314,7 @@ null or integer between 60 and 600000 (both inclusive)</p>
  </span>
 </dt>
 <dd>
-<p>Enable or disable screen dimming.</p>
+<p>Whether to enable screen dimming.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -12716,6 +13352,33 @@ null or integer between 20 and 600000 (both inclusive)</p>
 
 <p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">300</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/powerdevil.nix" target="_top">
+&lt;plasma-manager/modules/powerdevil.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.powerdevil.battery.displayBrightness"></a><a class="term" href="options.xhtml#opt-programs.plasma.powerdevil.battery.displayBrightness"><code class="option">programs.plasma.powerdevil.battery.displayBrightness</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The brightness to set the display to in this mode.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or integer between 0 and 100 (both inclusive)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">10</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -12782,13 +13445,40 @@ null or one of “hibernate”, “lockScreen”, “nothing”, “showLogoutSc
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.plasma.powerdevil.battery.powerProfile"></a><a class="term" href="options.xhtml#opt-programs.plasma.powerdevil.battery.powerProfile"><code class="option">programs.plasma.powerdevil.battery.powerProfile</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The Power Profile to enter in this mode.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or one of “performance”, “balanced”, “powerSaving”</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;powerSaving&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/powerdevil.nix" target="_top">
+&lt;plasma-manager/modules/powerdevil.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.plasma.powerdevil.battery.turnOffDisplay.idleTimeout"></a><a class="term" href="options.xhtml#opt-programs.plasma.powerdevil.battery.turnOffDisplay.idleTimeout"><code class="option">programs.plasma.powerdevil.battery.turnOffDisplay.idleTimeout</code>
   </a>
  </span>
 </dt>
 <dd>
-<p>The duration (in seconds), when on battery, the computer must be idle
-(when unlocked) until the display turns off.</p>
+<p>The duration (in seconds), when on battery, the computer, when unlocked, must be idle for
+until the display turns off.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or value “never” (singular enum) or integer between 30 and 600000 (both inclusive)</p>
@@ -12846,13 +13536,13 @@ null or one of “whenLockedAndUnlocked”, “immediately” or integer between
 <p>The action, when on battery, to perform when the laptop lid is closed.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-null or one of “doNothing”, “hibernate”, “lockScreen”, “shutdown”, “sleep”, “turnOffScreen”</p>
+null or one of “doNothing”, “hibernate”, “lockScreen”, “shutDown”, “sleep”, “turnOffScreen”</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">null</code></p>
 
 <p><span class="emphasis"><em>Example:</em></span>
-<code class="literal">&quot;shutdown&quot;</code></p>
+<code class="literal">&quot;shutDown&quot;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -12880,6 +13570,87 @@ null or one of “hybridSleep”, “standby”, “standbyThenHibernate”</p>
 
 <p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">&quot;standbyThenHibernate&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/powerdevil.nix" target="_top">
+&lt;plasma-manager/modules/powerdevil.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.powerdevil.batteryLevels.criticalAction"></a><a class="term" href="options.xhtml#opt-programs.plasma.powerdevil.batteryLevels.criticalAction"><code class="option">programs.plasma.powerdevil.batteryLevels.criticalAction</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The action to perform when Critical Battery Level is reached.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or one of “hibernate”, “nothing”, “shutDown”, “sleep”</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;shutDown&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/powerdevil.nix" target="_top">
+&lt;plasma-manager/modules/powerdevil.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.powerdevil.batteryLevels.criticalLevel"></a><a class="term" href="options.xhtml#opt-programs.plasma.powerdevil.batteryLevels.criticalLevel"><code class="option">programs.plasma.powerdevil.batteryLevels.criticalLevel</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The battery level considered “critical” for the laptop.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or integer between 0 and 100 (both inclusive)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">2</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/powerdevil.nix" target="_top">
+&lt;plasma-manager/modules/powerdevil.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.powerdevil.batteryLevels.lowLevel"></a><a class="term" href="options.xhtml#opt-programs.plasma.powerdevil.batteryLevels.lowLevel"><code class="option">programs.plasma.powerdevil.batteryLevels.lowLevel</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The battery level considered “low” for the laptop.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or integer between 0 and 100 (both inclusive)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">10</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -12951,7 +13722,7 @@ null or one of “hibernate”, “nothing”, “shutDown”, “sleep”</p>
  </span>
 </dt>
 <dd>
-<p>The duration (in seconds), when on lowBattery, the computer must be idle
+<p>The duration (in seconds), when on lowBattery, the computer must be idle for
 until the auto-suspend action is executed.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -12979,7 +13750,7 @@ null or integer between 60 and 600000 (both inclusive)</p>
  </span>
 </dt>
 <dd>
-<p>Enable or disable screen dimming.</p>
+<p>Whether to enable screen dimming.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
@@ -13017,6 +13788,33 @@ null or integer between 20 and 600000 (both inclusive)</p>
 
 <p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">300</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/powerdevil.nix" target="_top">
+&lt;plasma-manager/modules/powerdevil.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.powerdevil.lowBattery.displayBrightness"></a><a class="term" href="options.xhtml#opt-programs.plasma.powerdevil.lowBattery.displayBrightness"><code class="option">programs.plasma.powerdevil.lowBattery.displayBrightness</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The brightness to set the display to in this mode.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or integer between 0 and 100 (both inclusive)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">10</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -13083,13 +13881,40 @@ null or one of “hibernate”, “lockScreen”, “nothing”, “showLogoutSc
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.plasma.powerdevil.lowBattery.powerProfile"></a><a class="term" href="options.xhtml#opt-programs.plasma.powerdevil.lowBattery.powerProfile"><code class="option">programs.plasma.powerdevil.lowBattery.powerProfile</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The Power Profile to enter in this mode.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or one of “performance”, “balanced”, “powerSaving”</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;powerSaving&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/powerdevil.nix" target="_top">
+&lt;plasma-manager/modules/powerdevil.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.plasma.powerdevil.lowBattery.turnOffDisplay.idleTimeout"></a><a class="term" href="options.xhtml#opt-programs.plasma.powerdevil.lowBattery.turnOffDisplay.idleTimeout"><code class="option">programs.plasma.powerdevil.lowBattery.turnOffDisplay.idleTimeout</code>
   </a>
  </span>
 </dt>
 <dd>
-<p>The duration (in seconds), when on lowBattery, the computer must be idle
-(when unlocked) until the display turns off.</p>
+<p>The duration (in seconds), when on lowBattery, the computer, when unlocked, must be idle for
+until the display turns off.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or value “never” (singular enum) or integer between 30 and 600000 (both inclusive)</p>
@@ -13147,13 +13972,13 @@ null or one of “whenLockedAndUnlocked”, “immediately” or integer between
 <p>The action, when on lowBattery, to perform when the laptop lid is closed.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-null or one of “doNothing”, “hibernate”, “lockScreen”, “shutdown”, “sleep”, “turnOffScreen”</p>
+null or one of “doNothing”, “hibernate”, “lockScreen”, “shutDown”, “sleep”, “turnOffScreen”</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">null</code></p>
 
 <p><span class="emphasis"><em>Example:</em></span>
-<code class="literal">&quot;shutdown&quot;</code></p>
+<code class="literal">&quot;shutDown&quot;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -13198,7 +14023,7 @@ null or one of “hybridSleep”, “standby”, “standbyThenHibernate”</p>
  </span>
 </dt>
 <dd>
-<p>Config-files which should be deleted on each generation.</p>
+<p>Configuration files which should be explicitly deleted on each generation.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 list of string</p>
@@ -13222,7 +14047,7 @@ list of string</p>
  </span>
 </dt>
 <dd>
-<p>Config-files which explicitly should not be deleted on each generation.</p>
+<p>Configuration files which explicitly should not be deleted on each generation, if <code class="literal">overrideConfig</code> is enabled.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 list of string</p>
@@ -13235,6 +14060,90 @@ list of string</p>
 <tr><td>
 <code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/files.nix" target="_top">
 &lt;plasma-manager/modules/files.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.session.general.askForConfirmationOnLogout"></a><a class="term" href="options.xhtml#opt-programs.plasma.session.general.askForConfirmationOnLogout"><code class="option">programs.plasma.session.general.askForConfirmationOnLogout</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to ask for confirmation when shutting down, restarting or logging out</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/session.nix" target="_top">
+&lt;plasma-manager/modules/session.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.session.sessionRestore.excludeApplications"></a><a class="term" href="options.xhtml#opt-programs.plasma.session.sessionRestore.excludeApplications"><code class="option">programs.plasma.session.sessionRestore.excludeApplications</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of applications to exclude from session restore</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or (list of string)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">[
+  &quot;firefox&quot;
+  &quot;xterm&quot;
+]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/session.nix" target="_top">
+&lt;plasma-manager/modules/session.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.session.sessionRestore.restoreOpenApplicationsOnLogin"></a><a class="term" href="options.xhtml#opt-programs.plasma.session.sessionRestore.restoreOpenApplicationsOnLogin"><code class="option">programs.plasma.session.sessionRestore.restoreOpenApplicationsOnLogin</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Controls how applications are restored on login:</p><div class="itemizedlist"><ul class="itemizedlist " style="list-style-type: disc;"><li class="listitem"><p>“onLastLogout”: Restores applications that were open during the last logout.</p></li><li class="listitem"><p>“whenSessionWasManuallySaved”: Restores applications based on a manually saved session.</p></li><li class="listitem"><p>“startWithEmptySession”: Starts with a clean, empty session each time.</p></li></ul></div>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or one of “onLastLogout”, “startWithEmptySession”, “whenSessionWasManuallySaved”</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;startWithEmptySession&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/session.nix" target="_top">
+&lt;plasma-manager/modules/session.nix&gt;
 </a></code>
 </td></tr>
 </table>
@@ -13590,7 +14499,7 @@ attribute set of string</p>
 </dt>
 <dd>
 <p>Plasma desktop scripts to be run exactly once at startup. See
-https://develop.kde.org/docs/plasma/scripting/ for details on plasma
+the <a class="link" href="https://develop.kde.org/docs/plasma/scripting"  target="_top">KDE Documentation</a> for details on Plasma
 desktop scripts.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -13739,7 +14648,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The content of the startup-script.</p>
+<p>The content of the startup script.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 string</p>
@@ -13884,7 +14793,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The content of the startup-script.</p>
+<p>The content of the startup script.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 string</p>
@@ -13905,7 +14814,7 @@ string</p>
  </span>
 </dt>
 <dd>
-<p>Kwin window rules</p>
+<p>KWin window rules.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 list of (submodule)</p>
@@ -13929,7 +14838,7 @@ list of (submodule)</p>
  </span>
 </dt>
 <dd>
-<p>Values to apply</p>
+<p>Values to apply.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 attribute set of ((submodule) or (boolean or floating point number or signed integer or string) convertible to it)</p>
@@ -13953,7 +14862,7 @@ attribute set of ((submodule) or (boolean or floating point number or signed int
  </span>
 </dt>
 <dd>
-<p>how to apply the value</p>
+<p>How to apply the value.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 one of “do-not-affect”, “force”, “initially”, “remember”</p>
@@ -13977,7 +14886,7 @@ one of “do-not-affect”, “force”, “initially”, “remember”</p>
  </span>
 </dt>
 <dd>
-<p>value to set</p>
+<p>Value to set.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean or floating point number or signed integer or string</p>
@@ -13998,7 +14907,7 @@ boolean or floating point number or signed integer or string</p>
  </span>
 </dt>
 <dd>
-<p>value to set</p>
+<p>Value to set.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 string</p>
@@ -14040,7 +14949,7 @@ submodule</p>
  </span>
 </dt>
 <dd>
-<p>clientmachine matching</p>
+<p>clientmachine matching.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or ((submodule) or string convertible to it)</p>
@@ -14109,7 +15018,7 @@ string</p>
  </span>
 </dt>
 <dd>
-<p>Title matching</p>
+<p>Title matching.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or ((submodule) or string convertible to it)</p>
@@ -14178,7 +15087,7 @@ string</p>
  </span>
 </dt>
 <dd>
-<p>Window class matching</p>
+<p>Window class matching.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or ((submodule) or string convertible to it)</p>
@@ -14271,7 +15180,7 @@ string</p>
  </span>
 </dt>
 <dd>
-<p>Window role matching</p>
+<p>Window role matching.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or ((submodule) or string convertible to it)</p>
@@ -14340,7 +15249,7 @@ string</p>
  </span>
 </dt>
 <dd>
-<p>Window types to match</p>
+<p>Window types to match.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 list of (one of “desktop”, “dialog”, “dock”, “menubar”, “normal”, “osd”, “spash”, “toolbar”, “torn-of-menu”, “utility”)</p>
@@ -14384,12 +15293,39 @@ null or boolean</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.plasma.workspace.enableMiddleClickPaste"></a><a class="term" href="options.xhtml#opt-programs.plasma.workspace.enableMiddleClickPaste"><code class="option">programs.plasma.workspace.enableMiddleClickPaste</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether clicking the middle mouse button pastes the clipboard content.&quot;;</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/workspace.nix" target="_top">
+&lt;plasma-manager/modules/workspace.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.plasma.workspace.clickItemTo"></a><a class="term" href="options.xhtml#opt-programs.plasma.workspace.clickItemTo"><code class="option">programs.plasma.workspace.clickItemTo</code>
   </a>
  </span>
 </dt>
 <dd>
-<p>Clicking files or folders should open or select them.</p>
+<p>Whether clicking files or folders should open or select them.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “open”, “select”</p>
@@ -14413,7 +15349,7 @@ null or one of “open”, “select”</p>
  </span>
 </dt>
 <dd>
-<p>The Plasma colorscheme. Run plasma-apply-colorscheme --list-schemes for valid options.</p>
+<p>The Plasma color scheme. Run <code class="literal">plasma-apply-colorscheme --list-schemes</code> for valid options.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
@@ -14440,7 +15376,7 @@ null or string</p>
  </span>
 </dt>
 <dd>
-<p>Allows to configure the cursor in plasma. Both the theme and size are configurable.</p>
+<p>Submodule for configuring the cursor appearance. Both the theme and size are configurable.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or (submodule)</p>
@@ -14470,7 +15406,7 @@ null or (submodule)</p>
  </span>
 </dt>
 <dd>
-<p>The size of the cursor. See the settings GUI for allowed sizes for each cursortheme.</p>
+<p>The size of the cursor. See the System Settings app for allowed sizes for each cursor theme.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or (positive integer, meaning &gt;0)</p>
@@ -14497,7 +15433,7 @@ null or (positive integer, meaning &gt;0)</p>
  </span>
 </dt>
 <dd>
-<p>The Plasma cursortheme. Run plasma-apply-cursortheme --list-themes for valid options.</p>
+<p>The Plasma cursor theme. Run <code class="literal">plasma-apply-cursortheme --list-themes</code> for valid options.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
@@ -14551,7 +15487,7 @@ null or string</p>
  </span>
 </dt>
 <dd>
-<p>The Plasma look and feel theme. Run plasma-apply-lookandfeel --list for valid options.</p>
+<p>The Plasma Global Theme. Run <code class="literal">plasma-apply-lookandfeel --list</code> for valid options.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
@@ -14578,7 +15514,7 @@ null or string</p>
  </span>
 </dt>
 <dd>
-<p>The sound-theme to use with plasma.</p>
+<p>The sound theme to use with Plasma.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
@@ -14605,9 +15541,9 @@ null or string</p>
  </span>
 </dt>
 <dd>
-<p>The engine for the splash-screen theme. If not specified it will try
-to set an appropriate engine for you, but if this doesn’t work you
-might want to manually specify this.</p>
+<p>The engine for the splash screen theme. If not specified, Plasma will try
+to set an appropriate engine, but this may fail, in which case this option
+should be specified manually.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
@@ -14634,9 +15570,9 @@ null or string</p>
  </span>
 </dt>
 <dd>
-<p>The splash-screen theme shown at login. To see available values see the
-Theme key in ~/.config/ksplashrc after applying the splash-screen via
-the settings app. Can also be set to “None” to disable the splash-screen
+<p>The splash screen theme shown at login. To view all available values, see the
+<code class="literal">Theme</code> key in <code class="literal">$HOME/.config/ksplashrc</code> after imperatively applying the splash screen via
+the System Settings app. Can also be set to <code class="literal">None</code> to disable the splash screen
 altogether.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -14664,7 +15600,7 @@ null or string</p>
  </span>
 </dt>
 <dd>
-<p>The Plasma theme. Run plasma-apply-desktoptheme --list-themes for valid options.</p>
+<p>The Plasma style. Run <code class="literal">plasma-apply-desktoptheme --list-themes</code> for valid options.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
@@ -14718,7 +15654,7 @@ null or (positive integer, meaning &gt;0)</p>
  </span>
 </dt>
 <dd>
-<p>The Plasma wallpaper. Can be either be the path to an image file or a kpackage.</p>
+<p>The Plasma desktop wallpaper. Can be either the path to an image file or a KPackage.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or path</p>
@@ -14740,13 +15676,96 @@ null or path</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.plasma.workspace.wallpaperBackground"></a><a class="term" href="options.xhtml#opt-programs.plasma.workspace.wallpaperBackground"><code class="option">programs.plasma.workspace.wallpaperBackground</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>How to handle wallpaper background when there is empty space.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or (submodule)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">{
+  blur = true;
+}
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/workspace.nix" target="_top">
+&lt;plasma-manager/modules/workspace.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.workspace.wallpaperBackground.blur"></a><a class="term" href="options.xhtml#opt-programs.plasma.workspace.wallpaperBackground.blur"><code class="option">programs.plasma.workspace.wallpaperBackground.blur</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to blur the background</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/workspace.nix" target="_top">
+&lt;plasma-manager/modules/workspace.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.workspace.wallpaperBackground.color"></a><a class="term" href="options.xhtml#opt-programs.plasma.workspace.wallpaperBackground.color"><code class="option">programs.plasma.workspace.wallpaperBackground.color</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Background color to use</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;219,99,99&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/workspace.nix" target="_top">
+&lt;plasma-manager/modules/workspace.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.plasma.workspace.wallpaperFillMode"></a><a class="term" href="options.xhtml#opt-programs.plasma.workspace.wallpaperFillMode"><code class="option">programs.plasma.workspace.wallpaperFillMode</code>
   </a>
  </span>
 </dt>
 <dd>
 <p>Defines how the wallpaper should be displayed on the screen.
-Applies only to wallpaperPictureOfTheDay or wallpaperSlideShow.</p>
+Applies only to <code class="literal">wallpaper</code>, <code class="literal">wallpaperPictureOfTheDay</code> or <code class="literal">wallpaperSlideShow</code>.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “pad”, “preserveAspectCrop”, “preserveAspectFit”, “stretch”, “tile”, “tileHorizontally”, “tileVertically”</p>
@@ -14773,7 +15792,7 @@ null or one of “pad”, “preserveAspectCrop”, “preserveAspectFit”, “
  </span>
 </dt>
 <dd>
-<p>Allows you to set wallpaper using the picture of the day plugin. Needs the provider.</p>
+<p>Which plugin to fetch the Picture of the Day from.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or (submodule)</p>
@@ -14847,7 +15866,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Allows you to set wallpaper using a plain color. Color is a comma-seperated R,G,B,A string. Alpha optional (default is 256).</p>
+<p>Set the wallpaper using a plain color. Color is a comma-seperated R,G,B,A string. The alpha is optional (default is 256).</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
@@ -14874,7 +15893,7 @@ null or string</p>
  </span>
 </dt>
 <dd>
-<p>Allows you to set wallpaper slideshow. Needs a directory of your wallpapers and an interval length.</p>
+<p>Submodule for configuring the wallpaper slideshow. Needs a directory with wallpapers and an interval length.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or (submodule)</p>
@@ -14946,10 +15965,10 @@ path or list of path</p>
  </span>
 </dt>
 <dd>
-<p>The library for the window decorations theme. To see available values
-see the library key in the org.kde.kdecoration2 section of
-~/.config/kwinrc after applying the window-decoration via the
-settings app.</p>
+<p>The library for the window decorations theme. To view all available values,
+see the <code class="literal">library</code> key in the <code class="literal">org.kde.kdecoration2</code> section of
+<code class="literal">$HOME/.config/kwinrc</code> after imperatively applying the window decoration via the
+System Settings app.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
@@ -14976,9 +15995,9 @@ null or string</p>
  </span>
 </dt>
 <dd>
-<p>The window decorations theme. To see available values see the theme key
-in the org.kde.kdecoration2 section of ~/.config/kwinrc after
-applying the window-decoration via the settings app.</p>
+<p>The window decorations theme. To view all available values, see the <code class="literal">theme</code> key
+in the <code class="literal">org.kde.kdecoration2</code> section of <code class="literal">$HOME/.config/kwinrc</code> after
+imperatively applying the window decoration via the System Settings app.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
